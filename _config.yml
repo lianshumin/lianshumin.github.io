@@ -1,9 +1,9 @@
 # Basic
 title: Lian ShuMin
 subtitle: An iOS Developer 
-welcome_message: <a  href="https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999" target="_blank">Download my app</a>
+welcome_message: <a href="https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999" target="_blank">Download my app</a>
 description: Keep Discovering.
- : <a href="http://weibo.com/mrcccp”>@im苏联</a>
+creator: <a href="http://weibo.com/mrcccp”>@im苏联</a>
 
 url: "http://imlian.com"
 
@@ -12,9 +12,9 @@ permalink: /:year/:month/:title/
 # Format
 highlighter: plain
 
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty. 
 cover_color: blue
-
+ 
 # The blog button should not be removed.
 blog_button:
     title: Blog
@@ -37,7 +37,7 @@ comment:
     
 # Social
 social:
-    weibo: im苏联
+    weibo: mrcccp
     github: lianshumin
     twitter: lianshumin
     gplus: 107108267983477358170
