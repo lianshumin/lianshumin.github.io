@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Jekyll+Github Pages搭建博客之路</title>
+  <meta name="description" content="​	之前使用wordPress搭建的博客是架设在Amazon EC2，一年免费期限已到，决定搬家到Github上。搭建前，在HEXO和Jekyll间小纠结了下，最终选择Jekyll。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jekyll+Github Pages搭建博客之路">
+  <meta name="twitter:description" content="​	之前使用wordPress搭建的博客是架设在Amazon EC2，一年免费期限已到，决定搬家到Github上。搭建前，在HEXO和Jekyll间小纠结了下，最终选择Jekyll。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jekyll+Github Pages搭建博客之路">
+  <meta property="og:description" content="​	之前使用wordPress搭建的博客是架设在Amazon EC2，一年免费期限已到，决定搬家到Github上。搭建前，在HEXO和Jekyll间小纠结了下，最终选择Jekyll。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">
+  <link rel="alternate" type="application/rss+xml" title="Lian ShuMin" href="http://imlian.com/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 Lian ShuMin 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="Lian ShuMin logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lian ShuMin" class="blog-button">Lian ShuMin</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">An iOS Developer</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">Keep Discovering.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description"><a href="https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999" target="_blank">Download my app</a></p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+                  <li class="navigation__item"><a href="http://project.imlian.com" target="_blank" title="My Projects">Projects</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/mrcccp" title="@mrcccp 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/lianshumin" title="@lianshumin 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/lianshumin" title="@lianshumin" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:3073303@qq.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-blue"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-02-19 22:30:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-02-19</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">Jekyll+Github Pages搭建博客之路</h1>
+  </header>
+
+  <section class="post">
+    <p>​	之前使用wordPress搭建的博客是架设在Amazon EC2，一年免费期限已到，决定搬家到Github上。搭建前，在HEXO和Jekyll间小纠结了下，最终选择Jekyll。</p>
+
+<p>开始啦：</p>
+
+<ol>
+  <li>
+    <p>创建仓库</p>
+
+    <ul>
+      <li>登录Github创建仓库</li>
+    </ul>
+  </li>
+  <li>
+    <p>克隆仓库</p>
+
+    <ul>
+      <li>SourceTree 克隆到本地，建议Https，不要SSH。</li>
+    </ul>
+  </li>
+  <li>
+    <p>Jekyll本地环境搭建</p>
+
+    <ul>
+      <li>
+        <p>选择喜欢的<a href="http://jekyllthemes.org/">主题</a>。我选择喵神的<a href="https://github.com/onevcat/OneV-s-Den">vno</a>。下载到SourceTree本地目录里。</p>
+      </li>
+      <li>
+        <p>安装Ruby（一般Mac自带Ruby版本比较低，请自行升级）</p>
+      </li>
+      <li>
+        <p>安装Jekyll</p>
+
+        <pre><code>$ sudo gem install jekyll
+</code></pre>
+      </li>
+      <li>
+        <p>安装bundle</p>
+
+        <pre><code>$ cd /Users/lianshumin/iOS/Git/Blog
+$ sudo gem install bundle
+$ bundle install
+</code></pre>
+
+        <blockquote>
+          <p>ERROR: While executing gem … (Gem::Exception) Unable to require openssl, install OpenSSL and rebuild ruby (preferred) or use non-HTTPS sources。</p>
+
+          <p>这里OpenSSL出问题：需安装Openssl，找到Ruby安装路径，重安装Ruby，并设置为默认。</p>
+
+          <pre><code>$ rvm pkg install openssl
+$ ~/.rvm/usr
+$ rvm install 2.3.0 --with-openssl-dir=/Users/lianshumin/.rvm/usr
+$ rvm 2.3.0 --default
+</code></pre>
+        </blockquote>
+      </li>
+      <li>
+        <p>开启Jekyll环境</p>
+
+        <pre><code>$ bundle exec jekyll serve
+</code></pre>
+      </li>
+      <li>
+        <p>浏览器打开http://127.0.0.1:4000/，本地博客OK。</p>
+      </li>
+      <li>
+        <p>SouceTree上传到GitHub上，浏览器打开https://lianshumin.github.io/，远程博客OK。</p>
+      </li>
+    </ul>
+  </li>
+  <li>绑定个人域名
+    <ul>
+      <li>
+        <p>进入本地博客目录，创建文件CNAME，不带后缀。写入裸域名imlian.com 。</p>
+      </li>
+      <li>
+        <p>域名解析。之前已经在Namecheap.com上购入了域名，登陆后设置即可。</p>
+
+        <pre><code>192.30.252.153
+192.30.252.154
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>添加Disque评论</p>
+
+    <ul>
+      <li>注册Disque账号，Setting -&gt; Add disqus to site -&gt; Start Using Engage -&gt; imlian.disqus.com</li>
+      <li>设置本地目录下<code>_config.yml</code>文件的disqus的URL，disqus: imlian。</li>
+    </ul>
+  </li>
+  <li>
+    <p>细节修改</p>
+
+    <p>（to be continued）</p>
+  </li>
+  <li>
+    <p>发布博客</p>
+
+    <p>（to be continued)</p>
+  </li>
+</ol>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/";
+        this.page.identifier = "/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/";
+    };
+
+    var disqus_shortname = 'imlian';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2017-02-20 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://weibo.com/mrcccp”>@im苏联</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2017</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
