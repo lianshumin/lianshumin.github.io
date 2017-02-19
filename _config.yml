@@ -1,8 +1,8 @@
 # Basic
 title: Lian ShuMin
 subtitle: An iOS Developer 
-welcome_message: <a  href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Keep Discovering。
+welcome_message: <a  href="https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999" target="_blank">Download my app</a>
+description: Keep Discovering.
  : <a href="http://weibo.com/mrcccp”>@im苏联</a>
 
 url: "http://imlian.com"
@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    - {title: Projects, description: My Projects, url: 'http://project.imlian.com'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
