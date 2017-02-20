@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">
-  <link rel="alternate" type="application/rss+xml" title="Lian ShuMin" href="http://imlian.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">
+  <link rel="alternate" type="application/rss+xml" title="Lian ShuMin" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
   
@@ -188,34 +188,38 @@
       <li>
         <p>安装Jekyll</p>
 
-        <pre><code>$ sudo gem install jekyll
+        <div class="highlighter-rouge"><pre class="highlight"><code>$ sudo gem install jekyll
 </code></pre>
+        </div>
       </li>
       <li>
         <p>安装bundle</p>
 
-        <pre><code>$ cd /Users/lianshumin/iOS/Git/Blog
+        <div class="highlighter-rouge"><pre class="highlight"><code>$ cd /Users/lianshumin/iOS/Git/Blog
 $ sudo gem install bundle
 $ bundle install
 </code></pre>
+        </div>
 
         <blockquote>
           <p>ERROR: While executing gem … (Gem::Exception) Unable to require openssl, install OpenSSL and rebuild ruby (preferred) or use non-HTTPS sources。</p>
 
           <p>这里OpenSSL出问题：需安装Openssl，找到Ruby安装路径，重安装Ruby，并设置为默认。</p>
 
-          <pre><code>$ rvm pkg install openssl
+          <div class="highlighter-rouge"><pre class="highlight"><code>$ rvm pkg install openssl
 $ ~/.rvm/usr
 $ rvm install 2.3.0 --with-openssl-dir=/Users/lianshumin/.rvm/usr
 $ rvm 2.3.0 --default
 </code></pre>
+          </div>
         </blockquote>
       </li>
       <li>
         <p>开启Jekyll环境</p>
 
-        <pre><code>$ bundle exec jekyll serve
+        <div class="highlighter-rouge"><pre class="highlight"><code>$ bundle exec jekyll serve
 </code></pre>
+        </div>
       </li>
       <li>
         <p>浏览器打开http://127.0.0.1:4000/，本地博客OK。</p>
@@ -233,9 +237,10 @@ $ rvm 2.3.0 --default
       <li>
         <p>域名解析。之前已经在Namecheap.com上购入了域名，登陆后设置即可。</p>
 
-        <pre><code>192.30.252.153
+        <div class="highlighter-rouge"><pre class="highlight"><code>192.30.252.153
 192.30.252.154
 </code></pre>
+        </div>
       </li>
     </ul>
   </li>
@@ -244,7 +249,7 @@ $ rvm 2.3.0 --default
 
     <ul>
       <li>注册Disque账号，Setting -&gt; Add disqus to site -&gt; Start Using Engage -&gt; imlian.disqus.com</li>
-      <li>设置本地目录下<code>_config.yml</code>文件的disqus的URL，disqus: imlian。</li>
+      <li>设置本地目录下<code class="highlighter-rouge">_config.yml</code>文件的disqus的URL，disqus: imlian。</li>
     </ul>
   </li>
   <li>
@@ -258,6 +263,18 @@ $ rvm 2.3.0 --default
     <p>（to be continued)</p>
   </li>
 </ol>
+
+<blockquote>
+  <p>warning: You are attempting to use the ‘pygments’ highlighter, which is currently unsupported on GitHub Pages. Your site will use ‘rouge’ for highlighting instead. To suppress this warning, change the ‘highlighter’ value to ‘rouge’ in your ‘_config.yml’ and ensure the ‘pygments’ key is unset.</p>
+
+  <p>收到Github邮件提醒。很简单，把_config.yml 里把pygments替换为rouge，再更新下就可以了。</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>$ cd /Users/lianshumin/iOS/Git/Blog
+$ Bundle updated
+</code></pre>
+  </div>
+</blockquote>
+
 
   </section>
 </article>
@@ -274,7 +291,7 @@ $ rvm 2.3.0 --default
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/";
+        this.page.url = "http://localhost:4000/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/";
         this.page.identifier = "/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/";
     };
 
@@ -299,7 +316,7 @@ $ rvm 2.3.0 --default
             <section class="footer">
     <footer>
     	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
-        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2017-02-20 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2017-02-21 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
         <span class="footer__copyright">本站由 <a href="http://weibo.com/mrcccp”>@im苏联</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2017</span>
     </footer>
 </section>

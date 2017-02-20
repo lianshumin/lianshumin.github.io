@@ -3,11 +3,11 @@
   <channel>
     <title>Lian ShuMin</title>
     <description>Keep Discovering.</description>
-    <link>http://imlian.com/</link>
-    <atom:link href="http://imlian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Feb 2017 02:51:53 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2017 02:51:53 +0800</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 21 Feb 2017 00:14:44 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Feb 2017 00:14:44 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Jekyll+Github Pages搭建博客之路</title>
@@ -43,34 +43,38 @@
       &lt;li&gt;
         &lt;p&gt;安装Jekyll&lt;/p&gt;
 
-        &lt;pre&gt;&lt;code&gt;$ sudo gem install jekyll
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo gem install jekyll
 &lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;安装bundle&lt;/p&gt;
 
-        &lt;pre&gt;&lt;code&gt;$ cd /Users/lianshumin/iOS/Git/Blog
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd /Users/lianshumin/iOS/Git/Blog
 $ sudo gem install bundle
 $ bundle install
 &lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
 
         &lt;blockquote&gt;
           &lt;p&gt;ERROR: While executing gem … (Gem::Exception) Unable to require openssl, install OpenSSL and rebuild ruby (preferred) or use non-HTTPS sources。&lt;/p&gt;
 
           &lt;p&gt;这里OpenSSL出问题：需安装Openssl，找到Ruby安装路径，重安装Ruby，并设置为默认。&lt;/p&gt;
 
-          &lt;pre&gt;&lt;code&gt;$ rvm pkg install openssl
+          &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rvm pkg install openssl
 $ ~/.rvm/usr
 $ rvm install 2.3.0 --with-openssl-dir=/Users/lianshumin/.rvm/usr
 $ rvm 2.3.0 --default
 &lt;/code&gt;&lt;/pre&gt;
+          &lt;/div&gt;
         &lt;/blockquote&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;开启Jekyll环境&lt;/p&gt;
 
-        &lt;pre&gt;&lt;code&gt;$ bundle exec jekyll serve
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
 &lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;浏览器打开http://127.0.0.1:4000/，本地博客OK。&lt;/p&gt;
@@ -88,9 +92,10 @@ $ rvm 2.3.0 --default
       &lt;li&gt;
         &lt;p&gt;域名解析。之前已经在Namecheap.com上购入了域名，登陆后设置即可。&lt;/p&gt;
 
-        &lt;pre&gt;&lt;code&gt;192.30.252.153
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;192.30.252.153
 192.30.252.154
 &lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -99,7 +104,7 @@ $ rvm 2.3.0 --default
 
     &lt;ul&gt;
       &lt;li&gt;注册Disque账号，Setting -&amp;gt; Add disqus to site -&amp;gt; Start Using Engage -&amp;gt; imlian.disqus.com&lt;/li&gt;
-      &lt;li&gt;设置本地目录下&lt;code&gt;_config.yml&lt;/code&gt;文件的disqus的URL，disqus: imlian。&lt;/li&gt;
+      &lt;li&gt;设置本地目录下&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;文件的disqus的URL，disqus: imlian。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -113,10 +118,22 @@ $ rvm 2.3.0 --default
     &lt;p&gt;（to be continued)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;warning: You are attempting to use the ‘pygments’ highlighter, which is currently unsupported on GitHub Pages. Your site will use ‘rouge’ for highlighting instead. To suppress this warning, change the ‘highlighter’ value to ‘rouge’ in your ‘_config.yml’ and ensure the ‘pygments’ key is unset.&lt;/p&gt;
+
+  &lt;p&gt;收到Github邮件提醒。很简单，把_config.yml 里把pygments替换为rouge，再更新下就可以了。&lt;/p&gt;
+
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd /Users/lianshumin/iOS/Git/Blog
+$ Bundle updated
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+
 </description>
         <pubDate>Sun, 19 Feb 2017 22:30:00 +0800</pubDate>
-        <link>http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</link>
-        <guid isPermaLink="true">http://imlian.com/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</guid>
+        <link>http://localhost:4000/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/Jekyll+Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</guid>
         
         
       </item>
