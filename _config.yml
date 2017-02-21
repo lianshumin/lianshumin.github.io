@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.imlian.com'}
+    - {title: Projects, description: My Projects, url: 'https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
