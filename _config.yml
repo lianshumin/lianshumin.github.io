@@ -1,8 +1,8 @@
 # Basic
-title: 苏联 | 探索无限
-subtitle: An iOS Developer 
-welcome_message: <a href="https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999" target="_blank">Download my app</a>
-description: Keep Discovering.
+title: Trip Of Lian
+subtitle:  苏联 | 探索未知
+welcome_message: 嗨，我是连书敏(@im苏联)，一名持有PADI-OW潜水执照的iOS攻城狮。酷爱旅行。
+description: 
 creator: <a href="http://imlian.com”>@lianshumin</a>
 
 url: "http://imlian.com"
@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999'}
+    - {title: Projects, description: 项目, url: 'https://itunes.apple.com/us/app/晴子日语-自学日语的非凡搭档/id1173193999'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
