@@ -21,7 +21,7 @@ date: 2017-02-19 22:30:00.000000000 +08:00
 
 3. Jekyll本地环境搭建
 
-   [^3]: Jekyll的核心是一个文本的转换引擎，用Markdown、Textile、HTML写文档，再通过layout将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。[GitHub Pages](https://pages.github.com/)为了提供对HTML内容的支持，选择了Jekyll作为模板系统。
+   [^3]: Jekyll的核心是一个文本的转换引擎，用Markdown、Textile、HTML写文档，再通过layout将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。[GitHub Pages](https://pages.github.com/)为了提供对HTML内容的支持，选择了Jekyll作为模板系统。本地安装jekyll主要是为了测试，如果不需要本地测试的话就不用安装了，直接将编辑好的源文件上传到github就可以显示网站内容了。
 
    - 选择喜欢的[主题](http://jekyllthemes.org/)。我选择喵神的[vno](https://github.com/onevcat/OneV-s-Den)。下载到SourceTree本地目录里。
 
