@@ -9,10 +9,8 @@ categories: #objc
 ![](http://omqv71zv3.bkt.clouddn.com/8DDCEAED-EFED-4B15-A928-70F9F534F520.png)
 
 PM要求实现版本更新提醒。其实iOS已有现成的更新机制，但为了和Android版同步，同时避开APPLE审核规定。和PM沟通后，去除带更新功能的CELL，改为APP启动时进行版本更新判断。
-
 实现版本更新判断，图省事可用[iVersion](https://github.com/nicklockwood/iVersion)。
-
-项目要求自定义弹窗UI，自己实现也不难:happy:
+由于项目要求自定义弹窗UI，自己实现了一下:happy:
 
 原理：
 
