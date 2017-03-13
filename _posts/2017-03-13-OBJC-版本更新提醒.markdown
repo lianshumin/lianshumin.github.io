@@ -1,0 +1,82 @@
+```
+---
+layout: post
+title: "OBJC-版本更新提醒"
+date: 2017-03-13 16:00
+comments: true
+categories: #objc
+---
+```
+
+# OBJC-版本更新提醒
+
+![](http://omqv71zv3.bkt.clouddn.com/8DDCEAED-EFED-4B15-A928-70F9F534F520.png)
+
+PM要求实现版本更新提醒。其实iOS已有现成的更新机制，但为了和Android版同步，同时避开APPLE审核规定。和PM沟通后，去除带更新功能的CELL，改为APP启动时进行版本更新判断。
+
+实现版本更新判断，图省事可用[iVersion](https://github.com/nicklockwood/iVersion)。
+
+项目要求自定义弹窗UI，自己实现也不难:happy:
+
+原理：
+
+>当前版本号高于AppStore版本号，则弹窗提醒更新。
+>
+>用户点击更新，通过URL跳转至AppStroe下载。
+
+代码：
+
+```objective-c
+- (void)checkVersion{
+    
+    // 当前版本号
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
+    // 请求
+    NSString *url = [NSString stringWithFormat:@"http://itunes.apple.com/CN/lookup?bundleId=%@",APP_BUNDLEID_ID];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
+    [urlRequest setURL:[NSURL URLWithString:url]];
+    [urlRequest setHTTPMethod:@"POST"];
+    // JSON解析
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:returnData options:kNilOptions error:nil];
+    
+    NSArray *resultArr = jsonDic[@"results"];
+    if (resultArr != nil) {
+        NSDictionary *infoDic = resultArr[0];
+        NSString *lastVersion = infoDic[@"version"]; //applestore最新版本号
+        if (![lastVersion isEqualToString:currentVersion]) {
+            // 版本不同，弹出自定义提醒框
+            SLAlertUpdateViewController *alertUpdateVc = [[SLAlertUpdateViewController alloc] init];
+            alertUpdateVc.lastVersion = lastVersion;
+            alertUpdateVc.lastDescription = infoDic[@"releaseNotes"];//applestore版本更新内容
+            alertUpdateVc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            alertUpdateVc.providesPresentationContextTransitionStyle = YES;
+            alertUpdateVc.definesPresentationContext = YES;
+            [alertUpdateVc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertUpdateVc animated:YES completion:nil];
+            
+        }else{
+            return;
+        }
+    }
+}
+```
+
+```
+- (IBAction)download {
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/cn/app/wifi-xiao-guan-jia/id%d",APP_APPLE_ID]];
+        [[UIApplication sharedApplication] openURL:url];
+    }];
+}
+```
+
+注意：
+
+>CFBundleVersion：标识内部版本号。
+>
+>CFBundleShortVersionString：应用的发布版本号。
+
